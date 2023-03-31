@@ -27,6 +27,7 @@ Display cart total and list of products. By swiping left can remove item on cart
 provider package used to manage state on the app. Register two notifier for this app. Product notifier and cart notifier. When update happen on product list will rebuild the notifyListeners widget. 
 
 -http
+
  Used this package to call network request. 
 
 -cached_network_image
