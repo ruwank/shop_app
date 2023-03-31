@@ -136,7 +136,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  product.brandName,
+                  'Brand : ${product.brandName}',
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 15,
