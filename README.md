@@ -1,8 +1,8 @@
 # ecommerce_shop_app
 
-A new Flutter project.
+Shopping Cart app.
 
-## Getting Started
+## App Feature
 
 This project is a starting point for a Flutter application.
 
