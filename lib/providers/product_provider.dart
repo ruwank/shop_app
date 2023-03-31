@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:ecommerce_shop_app/models/http_exception.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -44,7 +45,7 @@ class ProductProvider with ChangeNotifier {
       _items = loadedProducts;
       notifyListeners();
     } catch (error) {
-      rethrow;
+      throw HttpException("Something went wrong");
     }
   }
 }

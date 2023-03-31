@@ -20,12 +20,17 @@ class ProductItem extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: GridTile(
+        header: Text(
+          product.name,
+          textAlign: TextAlign.center,
+          maxLines: 1,
+        ),
         footer: GridTileBar(
           title: Text(
-            product.name,
+            '${product.amount} ${product.currency}',
             textAlign: TextAlign.center,
           ),
-          backgroundColor: Colors.black87,
+          backgroundColor: Colors.black54,
           trailing: IconButton(
             icon: const Icon(Icons.shopping_cart),
             color: Theme.of(context).primaryColorDark,
