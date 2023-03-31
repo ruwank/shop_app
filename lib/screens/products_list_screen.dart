@@ -1,9 +1,10 @@
-import 'package:ecommerce_shop_app/providers/product_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/cart.dart';
 import '../widgets/product_grid.dart';
+import '../providers/product_provider.dart';
+
 import 'cart_screen.dart';
 
 class ProductsListScreen extends StatefulWidget {
@@ -61,9 +62,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
         ],
       ),
       body: _isLoading
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
+          ? const Center(child: CircularProgressIndicator())
           : const ProductsGrid(),
     );
   }

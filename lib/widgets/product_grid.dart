@@ -5,12 +5,14 @@ import 'product_item.dart';
 import '../providers/product_provider.dart';
 
 class ProductsGrid extends StatelessWidget {
-  const ProductsGrid({Key? key,}) : super(key: key);
+  const ProductsGrid({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-  final productsData =  Provider.of<ProductProvider>(context);
-  final productList = productsData.items;
+    final productsData = Provider.of<ProductProvider>(context);
+    final productList = productsData.items;
     return GridView.builder(
       padding: const EdgeInsets.all(12),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

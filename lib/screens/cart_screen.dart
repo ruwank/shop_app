@@ -12,6 +12,8 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
+    final cartItemList = cart.items.values.toList();
+    final cartProductIdList = cart.items.keys.toList();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Your Cart"),
@@ -25,13 +27,18 @@ class CartScreen extends StatelessWidget {
               children: [
                 const Text(
                   "Total",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 Chip(
-                  label: Text('${cart.totalAmount}'),
+                  label: Text(
+                    '${cart.totalAmount}',
+                    style: const TextStyle(color: Colors.white),
+                  ),
                   backgroundColor: Theme.of(context).primaryColor,
                 ),
               ],
@@ -44,11 +51,11 @@ class CartScreen extends StatelessWidget {
             child: ListView.builder(
               itemCount: cart.items.length,
               itemBuilder: (context, i) => CartItem(
-                id: cart.items.values.toList()[i].id,
-                productId: cart.items.keys.toList()[i],
-                title: cart.items.values.toList()[i].title,
-                quantity: cart.items.values.toList()[i].quantity,
-                price: cart.items.values.toList()[i].amount,
+                id: cartItemList[i].id,
+                productId: cartProductIdList[i],
+                title: cartItemList[i].title,
+                quantity: cartItemList[i].quantity,
+                price: cartItemList[i].amount,
               ),
             ),
           ),

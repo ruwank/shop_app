@@ -9,14 +9,11 @@ import '../screens/product_detail_screen.dart';
 class ProductItem extends StatelessWidget {
   final Product product;
 
-
-  const ProductItem(
-      {Key? key, required this.product})
-      : super(key: key);
+  const ProductItem({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final cart = Provider.of<Cart>(context,listen: false);
+    final cart = Provider.of<Cart>(context, listen: false);
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: GridTile(
@@ -41,7 +38,8 @@ class ProductItem extends StatelessWidget {
         ),
         child: GestureDetector(
           onTap: () {
-            Navigator.of(context).pushNamed(ProductDetailScreen.routeName,arguments: product.id);
+            Navigator.of(context).pushNamed(ProductDetailScreen.routeName,
+                arguments: product.id);
           },
           child: CachedNetworkImage(
             imageUrl: product.mainImage,

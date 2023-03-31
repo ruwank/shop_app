@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:ecommerce_shop_app/models/http_exception.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import '../models/product.dart';
+import '../models/http_exception.dart';
 
 class ProductProvider with ChangeNotifier {
   List<Product> _items = [];

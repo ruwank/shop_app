@@ -25,13 +25,3 @@ class Product {
     required this.description,
   });
 }
-
-class Price {
-  final double amount;
-  final String currency;
-
-  Price({
-    required this.amount,
-    required this.currency,
-  });
-}
