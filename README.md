@@ -5,23 +5,28 @@ Shopping Cart app.
 
 ## App Feature
 
-#App Contain 4 Screen
+#App Contain 3 Screens
 
 - Product list Screen.
- Display product items in grid view. User can move to detail page, Can move to Cart Screen.
+
+ Display product items in grid view. Top bar Contain Cart item with badge. Use that to move cart screen.  Can move to detail page by clicking on the grid item. Grid item also has cart icon . use that to add item to cart.
+ 
 - Product Detail Screen.
- Product detail display n this Screen. User can add product to card, Can go to Cart screen, Can go back.
+
+ Product detail display on this Screen. User can add product to cart by clicking  "Add to Cart" button. Top bar contain Cart icon with badge. used that to  move Cart Screen. Badge display home many product on the cart. 
   
+  
+- Cart Screen.
 
-A few resources to get you started if this is your first Flutter project:
+Display cart total and list of products. By swiping left can remove item on cart. 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# These are the packages used in the app
+-provider
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+provider pakage used to manage state on the app. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-http
+ Used this pakage to call network request. 
+
+-cached_network_image
