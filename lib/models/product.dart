@@ -24,4 +24,20 @@ class Product {
     required this.colour,
     required this.description,
   });
+
+  factory Product.fromJson(Map<String, dynamic> prodData) {
+    return Product(
+      id: prodData['id'],
+      sku: prodData['SKU'],
+      name: prodData['name'],
+      brandName: prodData['brandName'],
+      mainImage: prodData['mainImage'],
+      amount: double.parse(prodData['price']['amount']),
+      currency: prodData['price']['currency'],
+      sizes: prodData['sizes'].cast<String>(),
+      stockStatus: prodData['stockStatus'],
+      colour: prodData['colour'],
+      description: prodData['description'],
+    );
+  }
 }
